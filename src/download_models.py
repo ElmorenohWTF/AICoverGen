@@ -2,6 +2,16 @@ from pathlib import Path
 import requests
 
 MDX_DOWNLOAD_LINK = 'https://github.com/TRvlvr/model_repo/releases/download/all_public_uvr_models/'
+# List of individual model download links
+model_links = [
+    'https://github.com/TRvlvr/model_repo/releases/download/all_public_uvr_models/UVR-MDX-NET-Voc_FT.onnx',
+    'https://github.com/TRvlvr/model_repo/releases/download/all_public_uvr_models/UVR_MDXNET_KARA_2.onnx',
+    'https://github.com/TRvlvr/model_repo/releases/download/all_public_uvr_models/Reverb_HQ_By_FoxJoy.onnx'
+]
+
+# Concatenate the individual links to the existing MDX_DOWNLOAD_LINK
+MDX_DOWNLOAD_LINK += '\n'.join(model_links)
+
 RVC_DOWNLOAD_LINK = 'https://huggingface.co/IAHispano/Applio/tree/main/Resources'
 
 BASE_DIR = Path(__file__).resolve().parent.parent
